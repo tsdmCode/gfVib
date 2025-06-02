@@ -1,21 +1,310 @@
 /* #region globals, variables and imports */
 @import 'reset.css';
 
+:root {
+  --btnColorOne: #e79899;
+  --paraText: quicksand;
+  --colourTwo: #707070;
+}
+
 /* #endregion  */
+a {
+  text-decoration: none;
+}
+p {
+  font-family: quicksand, sans-serif;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
 
 /* #region nav */
 
+nav {
+  margin: 0.625rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 69px;
+  height: 40px;
+}
+
+#burger {
+  color: var(--btnColorOne);
+  width: 60px;
+  height: 15px;
+  margin-top: 16px;
+  margin-bottom: 1.5rem;
+}
+
+#desktop-nav {
+  display: none;
+}
+
+#desktop-nav a {
+  color: #707070;
+}
+
+#desktop-nav a:hover {
+  color: #e79899;
+}
+
 /* #endregion  */
 
-/* #section one  */
+/* #region header  */
+#global-header {
+  background-image: url('/assets/_FILES/images/slider1.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 812px;
+  position: relative;
+}
+
+h1 {
+  color: #ffffff;
+  font: normal bold 30px/35px Bodoni Moda;
+  text-align: center;
+}
+
+hgroup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 25%;
+  gap: 2rem;
+}
+
+#global-header button {
+  width: 200px;
+  height: 30px;
+  background-color: var(--btnColorOne);
+  border: none;
+  color: white;
+  letter-spacing: 1.2px;
+  font-family: Quicksand;
+  font-weight: bold;
+}
+/* #endregion */
+
+/* #region one  */
+
+section {
+  margin-top: 5rem;
+}
+
+section header {
+  text-align: center;
+  color: var(--colourTwo);
+}
+
+section header p {
+  font: Quicksand;
+  font-size: 20px;
+}
+
+section header h2 {
+  font: Bodoni Moda;
+  font-size: 30px;
+}
+
+#indretning-grid {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.grid-item img {
+  width: 340px;
+}
+
+.grid-item p {
+  color: #e79899;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  font-size: 14px;
+}
+section div div {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+section button {
+  width: 200px;
+  height: 30px;
+  background-color: #dec161;
+  border: none;
+  color: white;
+  font-family: Quicksand bold;
+  letter-spacing: 1.2px;
+}
+/* #endregion  */
+
+/* #region two */
+#section-two {
+  background-image: url('/assets/_FILES/images/article.jpg');
+  background-size: cover;
+  background-position: left;
+  height: 739px;
+  position: relative;
+}
+
+#section-two article {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 1rem;
+  color: black;
+  gap: 1rem;
+  color: white;
+}
+
+#section-two article h2 {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+
+#section-two article q {
+  quotes: '“' '”' '‘' '’';
+  font-size: 26px;
+  margin: 1rem 2rem;
+  font-family: Bodoni Moda;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#section-two article q::before {
+  content: open-quote;
+}
+#section-two article q::after {
+  content: close-quote;
+}
+#section-two article p {
+  letter-spacing: 1.4px;
+  font-size: 14px;
+}
+
+#section-two article button {
+  align-self: center;
+  background-color: var(--btnColorOne);
+}
+/* #endregion  */
+
+/* #region three  */
+
+#section-three {
+  margin-bottom: 6.625rem;
+}
+
+#section-three article {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 4.375rem;
+}
+
+#section-three article h2 {
+  margin-bottom: 0.5rem;
+}
+
+#section-three p {
+  font-family: Quicksand;
+  color: #707070;
+}
+
+input {
+  margin-bottom: 1.25rem;
+}
+
+input,
+select {
+  height: 2.5rem;
+  color: var(--btnColorOne);
+  font-size: 1.25rem;
+}
+
+#section-three form {
+  display: flex;
+  flex-direction: column;
+  font-family: quicksand;
+  width: 90%;
+  margin: 0rem 1rem;
+  color: var(--btnColorOne);
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+#section-three button {
+  align-self: center;
+  width: 340px;
+}
+
+select {
+  background-color: #ffffff;
+  margin-bottom: 1.875rem;
+}
 
 /* #endregion  */
 
-/* #section two */
+/* #region footer */
 
-/* #endregion  */
+footer {
+  text-align: center;
+  background-color: #707070;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 5.5rem;
+  font-family: quicksand;
+  letter-spacing: 1.4px;
+  gap: 2rem;
+}
 
-/* #section three  */
+#contact {
+  margin-bottom: 2rem;
+}
+
+footer article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer h3 {
+  font-weight: bold;
+}
+
+footer li {
+  margin-bottom: 1rem;
+}
+
+footer div > img {
+  width: 132px;
+  align-self: center;
+}
+
+#socials img {
+  width: 46px;
+  height: 46px;
+}
 
 /* #endregion  */
 
@@ -23,7 +312,70 @@
 
 /* #region screen  */
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1366px) {
+  /* main {
+    max-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  } */
+  #global-header .content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  hgroup {
+    align-items: flex-end;
+    text-align: right;
+  }
+  #global-header button {
+    width: 597px;
+    height: 49px;
+    font-size: 22px;
+    font-weight: 600px;
+  }
+  h1 {
+    font-family: Bodoni Moda bold;
+    font-size: 65px;
+    line-height: 1.2;
+    text-align: right;
+  }
+  #indretning-grid {
+    margin: 1rem 0rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .grid-item img {
+    width: 100%;
+  }
+  #desktop-nav {
+    display: flex;
+    align-items: flex-end;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  .content-wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #section-two .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #section-two .content-wrapper article button {
+    width: 600px;
+    height: 45px;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #INFO {
+    order: 1;
+  }
 }
 
 /* #endregion  */

@@ -5,7 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="https://kit.fontawesome.com/7041130a7c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./assets/js/index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <img src="./assets/_FILES/logo/logo-boligbladet-707070.png" alt="logo" />
+      <ul id="mobile-nav">
+        <i id="burger" class="fa-solid fa-bars"></i>
+      </ul>
+      <ul id="desktop-nav">
+        <li><a href="">INDRETNING</a></li>
+        <li><a href="#section-two">ARTIKLER</a></li>
+        <li><a href="#section-three">ABONNEMENT</a></li>
+      </ul>
+    </nav>
+    <header id="global-header">
+      <div class="content-wrapper">
+        <hgroup>
+          <h1>
+            Dit foretrukne Online
+            <br />
+            Boligmagasin
+          </h1>
+          <button onclick="location.href='https:web-mcdm.dk'">Læs Mere</button>
+        </hgroup>
+      </div>
+    </header>
+    <main>
+      <section id="section-one">
+        <div class="content-wrapper">
+          <header>
+            <p>Søger du</p>
+            <h2>
+              Inspiration til
+              <br />
+              boligindretning
+            </h2>
+          </header>
+          <div id="indretning-grid">
+            <figure class="grid-item">
+              <img src="./assets/_FILES/images/kitchen.jpg" alt="kitchen" />
+              <figcaption><p>KØKKENET</p></figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img src="./assets/_FILES/images/bathroom.jpg" alt="bathroom pic" />
+              <figcaption><p>BADEVÆRELSET</p></figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img src="./assets/_FILES/images/livingroom.jpg" alt="livingroom" />
+              <figcaption><p>STUEN</p></figcaption>
+            </figure>
+            <figure class="grid-item">
+              <img src="./assets/_FILES/images/garden.jpg" alt="garden" />
+              <figcaption><p>HAVEN</p></figcaption>
+            </figure>
+          </div>
+          <div><button>SE ALLE RUM</button></div>
+        </div>
+      </section>
+      <section id="section-two">
+        <div class="content-wrapper">
+          <article>
+            <h2>Ugens mest læste</h2>
+            <q>Thomas var mest til neutrale farver, men pludselig er en farve vokset på ham</q>
+            <button onclick="location.href='https:web-mcdm.dk'">LÆS ARTIKLEN HER</button>
+          </article>
+        </div>
+      </section>
+      <section id="section-three">
+        <div class="content-wrapper">
+          <article>
+            <header>
+              <h2>Abonnér på vores online magasin</h2>
+              <p>Og spar op til 379 kr</p>
+            </header>
+            <p>Når du udfylder formularen, får du fakturaen tilsendt på mail. Husk at tjekke dit spamfilter!</p>
+          </article>
+          <form id="subscribeform" action="" novalidate>
+            <label for="name">FULDE NAVN</label>
+            <input name="name" id="fullname" type="text" />
+            <label for="email">EMAIL</label>
+            <input name="email" id="email" type="email" />
+            <label for="select">ANTAL MÅNEDER</label>
+            <select name="select" id="months">
+              <option value="1">1 Måned</option>
+              <option value="2">2 Måneder</option>
+              <option value="3">3 Måneder</option>
+            </select>
+            <button id="submitBtn">KØB ABONNEMENT</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul id="contact">
+        <li><h3>KONTAKT OS</h3></li>
+        <li>
+          <article>
+            <p>TELEFON</p>
+            <p>+45 23 54 76 78</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p>EMAIL</p>
+            <p>INFO@INFO.DK</p>
+          </article>
+        </li>
+      </ul>
+      <ul id="INFO">
+        <li>
+          <h3>INFORMATION</h3>
+        </li>
+        <li>
+          <a href="https://web-mcdm.dk/">ABONNEMENTER</a>
+        </li>
+        <li>
+          <a href="https://web-mcdm.dk/">NYHEDSBREV</a>
+        </li>
+        <li>
+          <a href="https://web-mcdm.dk/">ANNONCERING</a>
+        </li>
+      </ul>
+      <div>
+        <img src="./assets/_FILES/logo/logo-boligbladet-white.png" alt="boligbladet logo hvid" />
+        <div id="socials">
+          <a href="https://web-mcdm.dk/"><img src="./assets/_FILES/icons/icon-facebook.svg" alt="facebook logo" /></a>
+          <a href="https://web-mcdm.dk/"><img src="./assets/_FILES/icons/icon-instagram.svg" alt="instagram logo" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
