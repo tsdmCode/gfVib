@@ -3,28 +3,28 @@ const backgrounds = [
   '/assets/_FILES/images/slider2.jpg',
   '/assets/_FILES/images/slider3.jpg',
 ];
-const form = document.getElementById('subscribeform');
-const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
-const noSpecialSignsRegex = new RegExp(/[!@$%^&*(),?":{}|<>]/);
-const header = document.getElementById('global-header');
 
 //preloader mine billeder så jeg undgår hvide flashes
+//virker ikke?
 backgrounds.forEach((src) => {
   const img = new Image();
   img.src = src;
 });
+
+const form = document.getElementById('subscribeform');
+const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+const noSpecialSignsRegex = new RegExp(/[!@$%^&*(),?":{}|<>]/);
+const header = document.getElementById('global-header');
 
 let currentIndex = 0;
 
 setInterval(() => {
   if (currentIndex == backgrounds.length - 1) {
     currentIndex = 0;
-
-    header.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
   } else {
     currentIndex++;
-    header.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
   }
+  header.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
 }, 5000);
 
 let hasErrors = false;
@@ -67,5 +67,4 @@ function clearErrors() {
   });
 }
 
-// submitBtn.addEventListener('click', submitForm);
 form.addEventListener('submit', submitForm);

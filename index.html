@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Boligbladet</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="https://kit.fontawesome.com/7041130a7c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,23 +15,24 @@
     <script src="./assets/js/index.js" defer></script>
   </head>
   <body>
-    <nav>
-      <img src="./assets/_FILES/logo/logo-boligbladet-707070.png" alt="logo" />
-      <ul id="mobile-nav">
-        <i id="burger" class="fa-solid fa-bars"></i>
-      </ul>
-      <ul id="desktop-nav">
-        <li><a href="">INDRETNING</a></li>
-        <li><a href="#section-two">ARTIKLER</a></li>
-        <li><a href="#section-three">ABONNEMENT</a></li>
-      </ul>
+    <div class="content-wrapper">
+      <nav>
+        <img src="./assets/_FILES/logo/logo-boligbladet-707070.png" alt="logo" />
+        <ul id="mobile-nav">
+          <i id="burger" class="fa-solid fa-bars"></i>
+        </ul>
+        <ul id="desktop-nav">
+          <li><a href="">INDRETNING</a></li>
+          <li><a href="#section-two">ARTIKLER</a></li>
+          <li><a href="#section-three">ABONNEMENT</a></li>
+        </ul>
+    </div>
     </nav>
     <header id="global-header">
       <div class="content-wrapper">
         <hgroup>
           <h1>
-            Dit foretrukne Online
-            <br />
+            <span>Dit foretrukne Online</span>
             Boligmagasin
           </h1>
           <button onclick="location.href='https:web-mcdm.dk'">Læs Mere</button>
@@ -51,19 +52,19 @@
           </header>
           <div id="indretning-grid">
             <figure class="grid-item">
-              <img src="./assets/_FILES/images/kitchen.jpg" alt="kitchen" />
+              <a href="https://web-mcdm.dk"><img src="./assets/_FILES/images/kitchen.jpg" alt="kitchen" /></a>
               <figcaption><p>KØKKENET</p></figcaption>
             </figure>
             <figure class="grid-item">
-              <img src="./assets/_FILES/images/bathroom.jpg" alt="bathroom pic" />
+              <a href="https://web-mcdm.dk"><img src="./assets/_FILES/images/bathroom.jpg" alt="bathroom pic" /></a>
               <figcaption><p>BADEVÆRELSET</p></figcaption>
             </figure>
             <figure class="grid-item">
-              <img src="./assets/_FILES/images/livingroom.jpg" alt="livingroom" />
+              <a href="https://web-mcdm.dk"><img src="./assets/_FILES/images/livingroom.jpg" alt="livingroom" /></a>
               <figcaption><p>STUEN</p></figcaption>
             </figure>
             <figure class="grid-item">
-              <img src="./assets/_FILES/images/garden.jpg" alt="garden" />
+              <a href="https://web-mcdm.dk"><img src="./assets/_FILES/images/garden.jpg" alt="garden" /></a>
               <figcaption><p>HAVEN</p></figcaption>
             </figure>
           </div>
@@ -74,8 +75,12 @@
         <div class="content-wrapper">
           <article>
             <h2>Ugens mest læste</h2>
-            <q>Thomas var mest til neutrale farver, men pludselig er en farve vokset på ham</q>
-            <button onclick="location.href='https:web-mcdm.dk'">LÆS ARTIKLEN HER</button>
+            <q>Thomas var mest til neutrale
+              <span>farver,</span>
+              men pludselig er en farve vokset
+              <span>på</span>
+              ham...</q>
+            <button id="viewMoreBtn" onclick="location.href='https:web-mcdm.dk'">LÆS ARTIKLEN HER</button>
           </article>
         </div>
       </section>
@@ -105,40 +110,44 @@
       </section>
     </main>
     <footer>
-      <ul id="contact">
-        <li><h3>KONTAKT OS</h3></li>
-        <li>
-          <article>
-            <p>TELEFON</p>
-            <p>+45 23 54 76 78</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <p>EMAIL</p>
-            <p>INFO@INFO.DK</p>
-          </article>
-        </li>
-      </ul>
-      <ul id="INFO">
-        <li>
-          <h3>INFORMATION</h3>
-        </li>
-        <li>
-          <a href="https://web-mcdm.dk/">ABONNEMENTER</a>
-        </li>
-        <li>
-          <a href="https://web-mcdm.dk/">NYHEDSBREV</a>
-        </li>
-        <li>
-          <a href="https://web-mcdm.dk/">ANNONCERING</a>
-        </li>
-      </ul>
-      <div>
-        <img src="./assets/_FILES/logo/logo-boligbladet-white.png" alt="boligbladet logo hvid" />
-        <div id="socials">
-          <a href="https://web-mcdm.dk/"><img src="./assets/_FILES/icons/icon-facebook.svg" alt="facebook logo" /></a>
-          <a href="https://web-mcdm.dk/"><img src="./assets/_FILES/icons/icon-instagram.svg" alt="instagram logo" /></a>
+      <div class="content-wrapper">
+        <ul id="contact">
+          <li><h3>KONTAKT OS</h3></li>
+          <li>
+            <article>
+              <p>TELEFON</p>
+              <p>+45 23 54 76 78</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <p>EMAIL</p>
+              <p>INFO@INFO.DK</p>
+            </article>
+          </li>
+        </ul>
+        <ul id="INFO">
+          <li>
+            <h3>INFORMATION</h3>
+          </li>
+          <li>
+            <a href="https://web-mcdm.dk/">ABONNEMENTER</a>
+          </li>
+          <li>
+            <a href="https://web-mcdm.dk/">NYHEDSBREV</a>
+          </li>
+          <li>
+            <a href="https://web-mcdm.dk/">ANNONCERING</a>
+          </li>
+        </ul>
+        <div>
+          <img src="./assets/_FILES/logo/logo-boligbladet-white.png" alt="boligbladet logo hvid" />
+          <div id="socials">
+            <a href="https://web-mcdm.dk/"><img src="./assets/_FILES/icons/icon-facebook.svg" alt="facebook logo" /></a>
+            <a href="https://web-mcdm.dk/">
+              <img src="./assets/_FILES/icons/icon-instagram.svg" alt="instagram logo" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

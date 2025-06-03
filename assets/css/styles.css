@@ -3,14 +3,24 @@
 
 :root {
   --btnColorOne: #e79899;
+  --btnColorTwo: #dec161;
   --paraText: quicksand;
   --colourTwo: #707070;
 }
 
-/* #endregion  */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
+
+h2 {
+  font-family: Bodoni Moda;
+}
+
 p {
   font-family: quicksand, sans-serif;
   font-size: 1rem;
@@ -20,6 +30,12 @@ p {
   color: red;
   font-size: 0.85rem;
 }
+button:hover {
+  filter: hue-rotate(180deg);
+  cursor: pointer;
+  color: black;
+}
+/* #endregion  */
 
 /* #region nav */
 
@@ -92,13 +108,13 @@ hgroup {
 }
 /* #endregion */
 
-/* #region one  */
+/* #region section one  */
 
 section {
   margin-top: 5rem;
 }
 
-section header {
+#section-one header {
   text-align: center;
   color: var(--colourTwo);
 }
@@ -122,6 +138,11 @@ section header h2 {
 
 .grid-item img {
   width: 340px;
+  overflow: hidden;
+}
+
+.grid-item img:hover {
+  transform: scale(1.1);
 }
 
 .grid-item p {
@@ -146,9 +167,9 @@ section button {
 }
 /* #endregion  */
 
-/* #region two */
+/* #region section two */
 #section-two {
-  background-image: url('/assets/_FILES/images/article.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/_FILES/images/article.jpg');
   background-size: cover;
   background-position: left;
   height: 739px;
@@ -199,7 +220,7 @@ section button {
 }
 /* #endregion  */
 
-/* #region three  */
+/* #region section three  */
 
 #section-three {
   margin-bottom: 6.625rem;
@@ -260,14 +281,16 @@ select {
 /* #endregion  */
 
 /* #region footer */
-
 footer {
-  text-align: center;
   background-color: #707070;
+  padding: 5.5rem;
+}
+
+footer .content-wrapper {
+  text-align: center;
   display: flex;
   flex-direction: column;
   color: #ffffff;
-  padding: 5.5rem;
   font-family: quicksand;
   letter-spacing: 1.4px;
   gap: 2rem;
@@ -313,16 +336,13 @@ footer div > img {
 /* #region screen  */
 
 @media screen and (min-width: 1366px) {
-  /* main {
-    max-width: 1366px;
-    margin: 0 auto;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  } */
   #global-header .content-wrapper {
     display: flex;
     justify-content: flex-end;
+  }
+  span::after {
+    content: '\a';
+    white-space: pre;
   }
   hgroup {
     align-items: flex-end;
@@ -344,13 +364,18 @@ footer div > img {
     margin: 1rem 0rem;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    gap: 4rem;
   }
   .grid-item img {
     width: 100%;
   }
+  nav {
+    margin: 0.625rem 0rem;
+  }
   #desktop-nav {
     display: flex;
     align-items: flex-end;
+    gap: 1rem;
   }
   #mobile-nav {
     display: none;
@@ -364,17 +389,60 @@ footer div > img {
     display: flex;
     justify-content: flex-start;
   }
+  #section-two .content-wrapper article {
+    text-align: left;
+    align-items: flex-start;
+    margin: 0rem;
+  }
+
+  #section-two article q {
+    margin: 0;
+    font-size: 50px;
+  }
   #section-two .content-wrapper article button {
     width: 600px;
     height: 45px;
+    align-self: flex-start;
   }
-  footer {
-    flex-direction: row;
-    justify-content: space-around;
+  #section-three form {
+    margin: 0;
+    width: 100%;
+  }
+  #section-three button {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
   }
 
+  #section-three .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #section-three article {
+    text-align: left;
+  }
+
+  footer .content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .content-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #contact {
+    text-align: left;
+  }
   #INFO {
     order: 1;
+    text-align: right;
+  }
+  #INFO,
+  #contact {
+    margin-top: 1rem;
   }
 }
 
