@@ -17,8 +17,13 @@ a {
   text-decoration: none;
 }
 
+h1,
 h2 {
   font-family: Bodoni Moda;
+}
+
+h2 {
+  font-weight: 900;
 }
 
 p {
@@ -30,8 +35,13 @@ p {
   color: red;
   font-size: 0.85rem;
 }
+
+.hidden {
+  display: none;
+}
+
 button:hover {
-  filter: hue-rotate(180deg);
+  filter: hue-rotate(90deg);
   cursor: pointer;
   color: black;
 }
@@ -45,6 +55,10 @@ nav {
   justify-content: space-between;
 }
 
+nav a {
+  color: #707070;
+}
+
 nav img {
   width: 69px;
   height: 40px;
@@ -52,29 +66,37 @@ nav img {
 
 #burger {
   color: var(--btnColorOne);
-  width: 60px;
-  height: 15px;
-  margin-top: 16px;
-  margin-bottom: 1.5rem;
+  align-self: center;
 }
 
 #desktop-nav {
   display: none;
-}
-
-#desktop-nav a {
-  color: #707070;
+  flex-direction: column;
 }
 
 #desktop-nav a:hover {
   color: #e79899;
 }
 
+#mobile-nav ul {
+  position: fixed;
+  padding: 1rem;
+  right: 2rem;
+  top: 10%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: quicksand;
+  color: #707070;
+  z-index: 9999;
+}
 /* #endregion  */
 
 /* #region header  */
 #global-header {
-  background-image: url('/assets/_FILES/images/slider1.jpg');
+  background-image: url('/assets/_FILES/images/slider1.jpg'), url('/assets/_FILES/images/slider2.jpg'),
+    url('/assets/_FILES/images/slider3.jpg');
   background-size: cover;
   background-position: center center;
   height: 812px;
@@ -83,7 +105,8 @@ nav img {
 
 h1 {
   color: #ffffff;
-  font: normal bold 30px/35px Bodoni Moda;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -119,13 +142,18 @@ section {
   color: var(--colourTwo);
 }
 
+#section-one .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 section header p {
   font: Quicksand;
   font-size: 20px;
 }
 
 section header h2 {
-  font: Bodoni Moda;
   font-size: 30px;
 }
 
@@ -136,6 +164,11 @@ section header h2 {
   gap: 1rem;
 }
 
+figcaption {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .grid-item img {
   width: 340px;
   overflow: hidden;
@@ -143,6 +176,7 @@ section header h2 {
 
 .grid-item img:hover {
   transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .grid-item p {
@@ -151,10 +185,9 @@ section header h2 {
   letter-spacing: 1.4px;
   font-size: 14px;
 }
-section div div {
+
+#getAllRooms {
   margin-top: 3rem;
-  display: flex;
-  justify-content: center;
 }
 section button {
   width: 200px;
@@ -162,7 +195,8 @@ section button {
   background-color: #dec161;
   border: none;
   color: white;
-  font-family: Quicksand bold;
+  font-family: Quicksand;
+  font-weight: bold;
   letter-spacing: 1.2px;
 }
 /* #endregion  */
@@ -196,19 +230,21 @@ section button {
 }
 
 #section-two article q {
-  quotes: '“' '”' '‘' '’';
+  /* quotes: '“' '”' '‘' '’'; */
   font-size: 26px;
   margin: 1rem 2rem;
   font-family: Bodoni Moda;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.2;
 }
-#section-two article q::before {
+
+/* #section-two article q::before {
   content: open-quote;
 }
 #section-two article q::after {
   content: close-quote;
-}
+} */
+
 #section-two article p {
   letter-spacing: 1.4px;
   font-size: 14px;
@@ -232,15 +268,19 @@ section button {
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   margin-bottom: 4.375rem;
+  color: #707070;
 }
 
 #section-three article h2 {
   margin-bottom: 0.5rem;
+  font: Bodoni Moda;
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: 0.02em;
 }
 
 #section-three p {
-  font-family: Quicksand;
-  color: #707070;
+  font-family: 'Quicksand';
 }
 
 input {
@@ -269,8 +309,8 @@ label {
 }
 
 #section-three button {
-  align-self: center;
-  width: 340px;
+  /* align-self: center; */
+  width: 100%;
 }
 
 select {
@@ -336,59 +376,94 @@ footer div > img {
 /* #region screen  */
 
 @media screen and (min-width: 1366px) {
+  #getAllRooms,
+  #viewMoreBtn {
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    font-family: quicksand;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+  }
+  #burger {
+    display: none;
+  }
   #global-header .content-wrapper {
     display: flex;
     justify-content: flex-end;
   }
+
   span::after {
     content: '\a';
     white-space: pre;
   }
+
   hgroup {
     align-items: flex-end;
     text-align: right;
   }
+
   #global-header button {
     width: 597px;
     height: 49px;
     font-size: 22px;
     font-weight: 600px;
   }
+
   h1 {
     font-family: Bodoni Moda bold;
     font-size: 65px;
     line-height: 1.2;
     text-align: right;
   }
+
   #indretning-grid {
     margin: 1rem 0rem;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 4rem;
   }
+
   .grid-item img {
     width: 100%;
   }
+
+  .grid-item p {
+    font-size: 18px;
+  }
+
   nav {
     margin: 0.625rem 0rem;
   }
+
+  section button {
+    letter-spacing: 1.8px;
+  }
+
   #desktop-nav {
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     gap: 1rem;
   }
-  #mobile-nav {
-    display: none;
+
+  #desktop-nav {
+    font-family: quicksand, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.4px;
   }
+
   .content-wrapper {
     max-width: 1366px;
     margin: 0 auto;
     width: 100%;
   }
+
   #section-two .content-wrapper {
     display: flex;
     justify-content: flex-start;
   }
+
   #section-two .content-wrapper article {
     text-align: left;
     align-items: flex-start;
@@ -399,15 +474,18 @@ footer div > img {
     margin: 0;
     font-size: 50px;
   }
+
   #section-two .content-wrapper article button {
     width: 600px;
     height: 45px;
     align-self: flex-start;
   }
+
   #section-three form {
     margin: 0;
     width: 100%;
   }
+
   #section-three button {
     width: 100%;
     height: 45px;
@@ -423,6 +501,10 @@ footer div > img {
     text-align: left;
   }
 
+  footer {
+    padding-top: 10rem;
+  }
+
   footer .content-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -436,10 +518,12 @@ footer div > img {
   #contact {
     text-align: left;
   }
+
   #INFO {
     order: 1;
     text-align: right;
   }
+
   #INFO,
   #contact {
     margin-top: 1rem;

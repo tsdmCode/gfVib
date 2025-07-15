@@ -8,25 +8,31 @@
     <script src="https://kit.fontawesome.com/7041130a7c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="./assets/js/index.js" defer></script>
   </head>
   <body>
     <div class="content-wrapper">
       <nav>
         <img src="./assets/_FILES/logo/logo-boligbladet-707070.png" alt="logo" />
-        <ul id="mobile-nav">
-          <i id="burger" class="fa-solid fa-bars"></i>
-        </ul>
+        <i id="burger" class="fa-solid fa-bars fa-lg"></i>
         <ul id="desktop-nav">
-          <li><a href="">INDRETNING</a></li>
+          <li><a href="#section-one">INDRETNING</a></li>
           <li><a href="#section-two">ARTIKLER</a></li>
           <li><a href="#section-three">ABONNEMENT</a></li>
         </ul>
     </div>
+    </nav>
+    <nav id="mobile-nav" class="hidden">
+      <ul>
+          <li><a href="#section-one">INDRETNING</a></li>
+          <li><a href="#section-two">ARTIKLER</a></li>
+          <li><a href="#section-three">ABONNEMENT</a></li>
+      </ul>
     </nav>
     <header id="global-header">
       <div class="content-wrapper">
@@ -46,7 +52,7 @@
             <p>Søger du</p>
             <h2>
               Inspiration til
-              <br />
+         
               boligindretning
             </h2>
           </header>
@@ -68,18 +74,18 @@
               <figcaption><p>HAVEN</p></figcaption>
             </figure>
           </div>
-          <div><button>SE ALLE RUM</button></div>
+         <button id="getAllRooms">SE ALLE RUM</button>
         </div>
       </section>
       <section id="section-two">
         <div class="content-wrapper">
           <article>
             <h2>Ugens mest læste</h2>
-            <q>Thomas var mest til neutrale
+            <q>“Thomas var mest til neutrale
               <span>farver,</span>
               men pludselig er en farve vokset
               <span>på</span>
-              ham...</q>
+              ham...”</q>
             <button id="viewMoreBtn" onclick="location.href='https:web-mcdm.dk'">LÆS ARTIKLEN HER</button>
           </article>
         </div>

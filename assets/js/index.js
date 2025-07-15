@@ -16,6 +16,15 @@ const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const noSpecialSignsRegex = new RegExp(/[!@$%^&*(),?":{}|<>]/);
 const header = document.getElementById('global-header');
 
+//burger menu building time?! Kan Troels gøre det?
+//ja
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobile-nav');
+
+burger.addEventListener('click', () => {
+  mobileNav.classList.toggle('hidden');
+});
+
 let currentIndex = 0;
 
 setInterval(() => {
